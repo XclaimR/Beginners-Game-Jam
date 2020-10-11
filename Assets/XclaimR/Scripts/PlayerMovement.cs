@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 10f;
+    float moveSpeed;
     [SerializeField] float jumpHeight = 10f;
     //[SerializeField] float jumpSpeed = 5f;
 
@@ -14,10 +14,15 @@ public class PlayerMovement : MonoBehaviour
     Vector3 vector;
 
     Rigidbody2D body;
+    GameObject gameManager;
+    GlobalVariables globalV;
+
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        gameManager = GameObject.Find("GameManager");
+        globalV = gameManager.GetComponent<GlobalVariables>();
     }
 
     // Update is called once per frame
@@ -28,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
+        moveSpeed = globalV.playerSpeed;
         vector.x = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         transform.position += vector;
 
@@ -51,7 +57,16 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
         }
-
-        
     }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        //Physics.IgnoreLayerCollision(8, 12, (.velocity.y > 0.0f));
+        if (collision.gameObject.tag == "Ground" && !Input.GetKeyDown(KeyCode.W))
+        {
+            isGrounded = false;
+        }
+    }
+
+
 }

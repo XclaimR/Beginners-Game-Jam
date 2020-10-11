@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField]float speed = 2f ;
+    float speed;
     [SerializeField]public float waitTime = 2f;
     [SerializeField]public bool MoveRight = true;
     [SerializeField] public bool isPause = false;
@@ -13,15 +13,21 @@ public class EnemyMovement : MonoBehaviour
     private float x_scale;
     private float y_scale;
 
+    GameObject gameManager;
+    GlobalVariables globalV;
+
     // Use this for initialization
     void Start()
     {
         x_scale = transform.localScale.x;
         y_scale = transform.localScale.y;
+        gameManager = GameObject.Find("GameManager");
+        globalV = gameManager.GetComponent<GlobalVariables>();
     }
 
     void Update()
     {
+        speed = globalV.enemySpeed;
         // Use this for initialization
         if (MoveRight && !isPause)
         {
@@ -56,8 +62,8 @@ public class EnemyMovement : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            Destroy(collider.gameObject);
-            collider.gameObject.GetComponent<Lives>().RemoveLives();
+            //Destroy(collider.gameObject);
+            //collider.gameObject.GetComponent<Lives>().RemoveLives();
         }
     }
 
