@@ -8,12 +8,15 @@ public class GlobalVariables : MonoBehaviour
     [SerializeField] public float playerSpeed = 5f;
     [SerializeField] public Color lightColor;
     [SerializeField] public int chances = 2;
+    public int collected = 0;
+    public int totalCollectibles;
 
     void Start()
     {
         enemySpeed = 0.5f;
         playerSpeed = 5f;
         lightColor = new Color(0.6320754f, 0.6320754f, 0.6320754f);
+        totalCollectibles = GameObject.FindGameObjectsWithTag("Collectible").Length;
     }
 
     public void RedAlert()

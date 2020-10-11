@@ -57,6 +57,21 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
         }
+
+        
+    }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "UFO")
+        {
+            if (globalV.collected == globalV.totalCollectibles)
+            {
+                Debug.Log("Entered");
+                //gameManager.GetComponent<SceneLoader>().LoadNextScene();
+                gameManager.GetComponent<SceneLoader>().LoadGameOverScreen();
+            }
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
