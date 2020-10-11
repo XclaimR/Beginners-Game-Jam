@@ -426,6 +426,7 @@ MonoBehaviour:
   enemySpeed: 0
   playerSpeed: 0
   lightColor: {r: 0, g: 0, b: 0, a: 0}
+  chances: 2
 --- !u!1 &1279425812
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,6 +1219,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5625096582399649264, guid: a72da758e9000154c9f4959d595487df,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5625096582399649265, guid: a72da758e9000154c9f4959d595487df,
         type: 3}

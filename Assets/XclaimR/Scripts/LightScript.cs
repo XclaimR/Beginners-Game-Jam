@@ -11,6 +11,8 @@ public class LightScript : MonoBehaviour
     Light2D lt;
     GameObject gameManager;
     GlobalVariables globalV;
+    public float detectRate = 2f;
+    float nextDetectTime = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +43,12 @@ public class LightScript : MonoBehaviour
         if(collider.gameObject.tag == "Player")
         {
             //Destroy(collider.gameObject);
-            globalV.RedAlert();
-            Debug.Log("Detected");
+            if (Time.time >= nextDetectTime)
+            {
+                nextDetectTime = Time.time + 1 / detectRate;
+                globalV.RedAlert();
+                Debug.Log("Detected");
+            }
         }
     }
     

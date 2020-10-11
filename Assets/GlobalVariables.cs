@@ -7,6 +7,7 @@ public class GlobalVariables : MonoBehaviour
     [SerializeField] public float enemySpeed = 0.5f;
     [SerializeField] public float playerSpeed = 5f;
     [SerializeField] public Color lightColor;
+    [SerializeField] public int chances = 2;
 
     void Start()
     {
@@ -17,8 +18,19 @@ public class GlobalVariables : MonoBehaviour
 
     public void RedAlert()
     {
+        chances--;
+        if(chances == 0)
+        {
+            GameOver();
+        }
         enemySpeed = 2f;
         playerSpeed = 8f;
         lightColor = new Color(0.7924528f, 0f, 0f);
+    }
+
+    void GameOver()
+    {
+        SceneLoader sceneLoader = gameObject.GetComponent<SceneLoader>();
+        sceneLoader.LoadGameOverScreen();
     }
 }
