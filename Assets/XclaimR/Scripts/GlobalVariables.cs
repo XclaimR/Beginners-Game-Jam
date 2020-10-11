@@ -34,6 +34,6 @@ public class GlobalVariables : MonoBehaviour
     void GameOver()
     {
         SceneLoader sceneLoader = gameObject.GetComponent<SceneLoader>();
-        sceneLoader.LoadGameOverScreen();
+        //sceneLoader.LoadGameOverScreen();
     }
 }

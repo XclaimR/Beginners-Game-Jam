@@ -11,7 +11,7 @@ public class LightScript : MonoBehaviour
     Light2D lt;
     GameObject gameManager;
     GlobalVariables globalV;
-    public float detectRate = 2f;
+    public float detectRate = 5f;
     float nextDetectTime = 0f;
 
     // Start is called before the first frame update

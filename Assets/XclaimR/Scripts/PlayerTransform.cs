@@ -36,7 +36,7 @@ public class PlayerTransform : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W) && pm.isGrounded)
         {
-            vcam.Follow = human.transform;
+            //vcam.Follow = human.transform;
             alien.GetComponent<SpriteRenderer>().enabled = false;
             alien.GetComponent<BoxCollider2D>().enabled = false;
             alien.GetComponent<Rigidbody2D>().gravityScale = 0;
@@ -45,7 +45,7 @@ public class PlayerTransform : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.W) && pm.isGrounded)
         {
-            vcam.Follow = alien.transform;
+            //vcam.Follow = alien.transform;
             alien.GetComponent<SpriteRenderer>().enabled = true;
             alien.GetComponent<BoxCollider2D>().enabled = true;
             alien.GetComponent<Rigidbody2D>().gravityScale = 2;

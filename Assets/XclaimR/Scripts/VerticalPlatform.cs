@@ -17,6 +17,7 @@ public class VerticalPlatform : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.S))
         {
             waitTime = 0.5f;
+            effector.rotationalOffset = 0;
         }
 
         if (Input.GetKey(KeyCode.S))
@@ -32,9 +33,9 @@ public class VerticalPlatform : MonoBehaviour
             }
         }
 
-        if (Input.GetButton("Jump"))
-        {
-            effector.rotationalOffset = 0;
-        }
+        //if (Input.GetButton("Jump"))
+        //{
+            
+        //}
     }
 }
