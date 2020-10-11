@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Flashlight
   - Collectible
+  - UFO
   layers:
   - Default
   - TransparentFX
