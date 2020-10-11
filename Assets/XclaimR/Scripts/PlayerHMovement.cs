@@ -9,12 +9,14 @@ public class PlayerHMovement : MonoBehaviour
     private float x_scale;
     private float y_scale;
     Vector3 vector;
+    GameObject Bottom;
 
     // Start is called before the first frame update
     void Start()
     {
         x_scale = transform.localScale.x;
         y_scale = transform.localScale.y;
+        Bottom = gameObject.transform.GetChild(1).gameObject;
     }
 
     // Update is called once per frame
@@ -22,7 +24,8 @@ public class PlayerHMovement : MonoBehaviour
     {
         if (player)
         {
-            transform.position = new Vector2(player.transform.position.x, player.transform.position.y - transform.position.y / 5);
+            //transform.position = new Vector2(player.transform.position.x, player.transform.position.y - transform.position.y/2);
+            Bottom.transform.position = new Vector2(player.transform.position.x, player.transform.position.y);
             vector.x = Input.GetAxis("Horizontal");
             if (vector.x < 0)
             {
