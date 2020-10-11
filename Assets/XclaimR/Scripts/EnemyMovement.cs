@@ -52,6 +52,15 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        {
+            Destroy(collider.gameObject);
+            collider.gameObject.GetComponent<Lives>().RemoveLives();
+        }
+    }
+
     void Resume()
     {
         isPause = false;

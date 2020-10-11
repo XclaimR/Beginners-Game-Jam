@@ -20,15 +20,22 @@ public class PlayerHMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector2(player.transform.position.x,player.transform.position.y - transform.position.y/5);
-        vector.x = Input.GetAxis("Horizontal");
-        if (vector.x < 0)
+        if (player)
         {
-            transform.localScale = new Vector2(-x_scale, y_scale);
+            transform.position = new Vector2(player.transform.position.x, player.transform.position.y - transform.position.y / 5);
+            vector.x = Input.GetAxis("Horizontal");
+            if (vector.x < 0)
+            {
+                transform.localScale = new Vector2(-x_scale, y_scale);
+            }
+            if (vector.x > 0)
+            {
+                transform.localScale = new Vector2(x_scale, y_scale);
+            }
         }
-        if (vector.x > 0)
+        else
         {
-            transform.localScale = new Vector2(x_scale, y_scale);
+            Destroy(gameObject);
         }
     }
 }
