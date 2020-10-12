@@ -43,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButton("Jump") && isGrounded && body.velocity.y == 0)
         {
             //Debug.Log("Jump");
+            animator.SetTrigger("isJump");
+            //animator.SetBool("Jump", true);
             isGrounded = false;
             Jump();
         }
@@ -50,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        
+        
         body.AddForce(new Vector2(0,jumpHeight), ForceMode2D.Impulse);
     }
 
@@ -58,6 +62,8 @@ public class PlayerMovement : MonoBehaviour
         //Physics.IgnoreLayerCollision(8, 12, (.velocity.y > 0.0f));
         if (collision.gameObject.tag == "Ground")
         {
+            animator.ResetTrigger("isJump");
+            //animator.SetBool("Jump", false);
             isGrounded = true;
         }
 
