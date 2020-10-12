@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20749113, g: 0.2114747, b: 0.1457682, a: 1}
+  m_IndirectSpecularColor: {r: 0.20749141, g: 0.2114749, b: 0.14576823, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2307,7 +2307,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 86b86fbfcb4ffe04ea1d97063eae5b5d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 23c0fe07eb0194f53a321fc40c6a3752, type: 3}
   m_Color: {r: 0.40396938, g: 0.8406554, b: 0.9622642, a: 0.56078434}
   m_FlipX: 0
   m_FlipY: 0
@@ -2326,8 +2326,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279425812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.01, y: 3.47, z: -8.951374}
-  m_LocalScale: {x: 39.38093, y: 24.057438, z: 1}
+  m_LocalPosition: {x: 4.531, y: 6.4, z: -8.951374}
+  m_LocalScale: {x: 1.2096366, y: 1.1418645, z: 0.066307135}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -2367,7 +2367,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 35.080315, y: 19.51}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2415,7 +2415,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 86b86fbfcb4ffe04ea1d97063eae5b5d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8042872416df940de8439ffb25410ebc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2434,8 +2434,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408352188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.6, y: -3.25, z: -0.7}
-  m_LocalScale: {x: 42.80406, y: 4.196689, z: 0.58315206}
+  m_LocalPosition: {x: 5.94, y: 3.86, z: -0.7}
+  m_LocalScale: {x: 1.2916095, y: 0.70881593, z: 0.13393275}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
