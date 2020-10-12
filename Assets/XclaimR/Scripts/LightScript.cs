@@ -47,8 +47,15 @@ public class LightScript : MonoBehaviour
             {
                 nextDetectTime = Time.time + 1 / detectRate;
                 globalV.RedAlert();
-                Debug.Log("Detected");
+               // Debug.Log("Detected");
             }
+        }
+
+        if(collider.gameObject.tag == "Transform")
+        {
+            Debug.Log("Detected");
+            eMove.isPause = true;
+            Invoke("eMove.Resume", 1);
         }
     }
     

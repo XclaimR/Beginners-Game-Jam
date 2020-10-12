@@ -41,7 +41,8 @@ public class PlayerTransform : MonoBehaviour
             alien.GetComponent<BoxCollider2D>().enabled = false;
             alien.GetComponent<Rigidbody2D>().gravityScale = 0;
             alien.GetComponent<PlayerMovement>().enabled = false;
-            human.GetComponent<SpriteRenderer>().enabled = true;
+            //human.GetComponent<SpriteRenderer>().enabled = true;
+            human.SetActive(true);
         }
         if (Input.GetKeyUp(KeyCode.W) && pm.isGrounded)
         {
@@ -50,7 +51,8 @@ public class PlayerTransform : MonoBehaviour
             alien.GetComponent<BoxCollider2D>().enabled = true;
             alien.GetComponent<Rigidbody2D>().gravityScale = 2;
             alien.GetComponent<PlayerMovement>().enabled = true;
-            human.GetComponent<SpriteRenderer>().enabled = false;
+            //human.GetComponent<SpriteRenderer>().enabled = false;
+            human.SetActive(false);
         }
     }
 }

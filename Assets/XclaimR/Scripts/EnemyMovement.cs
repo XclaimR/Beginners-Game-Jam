@@ -40,6 +40,7 @@ public class EnemyMovement : MonoBehaviour
             transform.localScale = new Vector2(-x_scale, y_scale);
         }
     }
+
     void OnTriggerEnter2D(Collider2D trig)
     {
         
@@ -67,7 +68,7 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    void Resume()
+    public void Resume()
     {
         isPause = false;
     }

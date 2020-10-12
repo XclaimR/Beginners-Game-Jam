@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 3d85b3850d848874f912d53fe6489fda
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6090194777201339145
+    second: orb_sprite_sheet_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
