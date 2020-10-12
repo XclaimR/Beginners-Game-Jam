@@ -17,6 +17,8 @@ public class GlobalVariables : MonoBehaviour
         playerSpeed = 5f;
         lightColor = new Color(0.6320754f, 0.6320754f, 0.6320754f);
         totalCollectibles = GameObject.FindGameObjectsWithTag("Collectible").Length;
+        GameObject snow = GameObject.Find("Snow");
+        snow.GetComponent<ParticleSystem>().Play();
     }
 
     public void RedAlert()
