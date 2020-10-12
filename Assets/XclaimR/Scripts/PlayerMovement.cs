@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     GameObject gameManager;
     GlobalVariables globalV;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
     {
         moveSpeed = globalV.playerSpeed;
         vector.x = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
+        animator.SetFloat("isMove", Mathf.Abs(vector.x));
         transform.position += vector;
 
         if (Input.GetButton("Jump") && isGrounded && body.velocity.y == 0)
