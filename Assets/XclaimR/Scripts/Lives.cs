@@ -26,6 +26,6 @@ public class Lives : MonoBehaviour
     public void RemoveLives()
     {
         lives--;
-        FindObjectOfType<SceneLoader>().LoadGameOverScreen();
+        FindObjectOfType<SceneLoader>().LoadGameOverScene();
     }
 }

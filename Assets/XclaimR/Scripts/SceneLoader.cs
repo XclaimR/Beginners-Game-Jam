@@ -18,9 +18,25 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void LoadGameOverScreen()
+    public void LoadGameOverScene()
     {
-        SceneManager.LoadScene("GameOverScreen");
+        SceneManager.LoadScene("GameOverScene");
+    }
+
+    public void LoadRestartScene()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex - 1);
+    }
+
+    public void LoadOptionsScene()
+    {
+        SceneManager.LoadScene("OptionsScene");
+    }
+
+    public void LoadHowToPlayScene()
+    {
+        SceneManager.LoadScene("HowToPlayScene");
     }
 
     public void QuitGame()

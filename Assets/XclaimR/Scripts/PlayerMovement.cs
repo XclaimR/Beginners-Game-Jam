@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 Debug.Log("Entered");
                 //gameManager.GetComponent<SceneLoader>().LoadNextScene();
-                gameManager.GetComponent<SceneLoader>().LoadGameOverScreen();
+                gameManager.GetComponent<SceneLoader>().LoadGameOverScene();
             }
         }
     }
