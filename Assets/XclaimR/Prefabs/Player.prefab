@@ -175,7 +175,7 @@ PrefabInstance:
     - target: {fileID: 9033627109177669216, guid: d1efe2d4ce9347c44b4566c65515ed1d,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9033627109177669219, guid: d1efe2d4ce9347c44b4566c65515ed1d,
         type: 3}
@@ -255,12 +255,12 @@ PrefabInstance:
     - target: {fileID: 9033627109177669279, guid: d1efe2d4ce9347c44b4566c65515ed1d,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Transform
       objectReference: {fileID: 0}
     - target: {fileID: 9033627109177669279, guid: d1efe2d4ce9347c44b4566c65515ed1d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9033627109177669217, guid: d1efe2d4ce9347c44b4566c65515ed1d, type: 3}
