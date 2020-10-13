@@ -20,13 +20,15 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadGameOverScene()
     {
+        gameObject.GetComponent<Lives>().SetLives();
+        PlayerPrefs.SetInt("Lives", gameObject.GetComponent<Lives>().GetLives());
         SceneManager.LoadScene("GameOverScene");
     }
 
     public void LoadRestartScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex - 1);
+        SceneManager.LoadScene(currentSceneIndex);
     }
 
     public void LoadOptionsScene()

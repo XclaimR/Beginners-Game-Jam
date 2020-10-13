@@ -8,8 +8,13 @@ public class GlobalVariables : MonoBehaviour
     [SerializeField] public float playerSpeed = 5f;
     [SerializeField] public Color lightColor;
     [SerializeField] public int chances = 2;
+    public float detectRate = 5f;
+    public float nextDetectTime = 0f;
+    public float coolDownRate = 20f;
+    public float nextCoolDownTime = -1f;
     public int collected = 0;
     public int totalCollectibles;
+
 
     void Start()
     {
@@ -46,7 +51,7 @@ public class GlobalVariables : MonoBehaviour
 
     void GameOver()
     {
-        SceneLoader sceneLoader = gameObject.GetComponent<SceneLoader>();
-        //sceneLoader.LoadGameOverScreen();
+        Lives lives = gameObject.GetComponent<Lives>();
+        lives.RemoveLives();
     }
 }

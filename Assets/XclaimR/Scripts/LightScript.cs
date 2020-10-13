@@ -11,10 +11,6 @@ public class LightScript : MonoBehaviour
     Light2D lt;
     GameObject gameManager;
     GlobalVariables globalV;
-    public float detectRate = 5f;
-    float nextDetectTime = 0f;
-    public float coolDownRate = 20f;
-    float nextCoolDownTime = -1f;
     bool detected = false;
 
     // Start is called before the first frame update
@@ -40,7 +36,7 @@ public class LightScript : MonoBehaviour
         }
         transform.position = fl_point.transform.position;
 
-        if (Time.time > nextCoolDownTime && detected == true)
+        if (Time.time > globalV.nextCoolDownTime && detected == true)
         {
             globalV.NormalAlert();
             detected = false;
@@ -53,10 +49,10 @@ public class LightScript : MonoBehaviour
         if(collider.gameObject.tag == "Player")
         {
             //Destroy(collider.gameObject);
-            if (Time.time >= nextDetectTime)
+            if (Time.time >= globalV.nextDetectTime)
             {
-                nextDetectTime = Time.time + 1 / detectRate;
-                nextCoolDownTime = Time.time + coolDownRate;
+                globalV.nextDetectTime = Time.time + 1 / globalV.detectRate;
+                globalV.nextCoolDownTime = Time.time + globalV.coolDownRate;
                 detected = true;
                 globalV.RedAlert();
                // Debug.Log("Detected");

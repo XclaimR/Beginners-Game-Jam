@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Lives : MonoBehaviour
 {
-    [SerializeField] float lives = 3;
+    [SerializeField] int lives = 3;
+
+    void Awake()
+    {
+        
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        lives = PlayerPrefs.GetInt("Lives");
     }
 
     // Update is called once per frame
@@ -18,7 +23,12 @@ public class Lives : MonoBehaviour
 
     }
 
-    public float GetLives()
+    public void SetLives()
+    {
+        lives = 3;
+    }
+
+    public int GetLives()
     {
         return lives;
     }
@@ -26,6 +36,14 @@ public class Lives : MonoBehaviour
     public void RemoveLives()
     {
         lives--;
-        FindObjectOfType<SceneLoader>().LoadGameOverScene();
+        PlayerPrefs.SetInt("Lives",lives);
+        if (GetLives() <= 0)
+        {
+            FindObjectOfType<SceneLoader>().LoadGameOverScene();
+        }
+        else
+        {
+            FindObjectOfType<SceneLoader>().LoadRestartScene();
+        }
     }
 }
