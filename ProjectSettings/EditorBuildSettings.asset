@@ -6,9 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    path: Assets/Rebirth/Scenes/MainMenuScene.unity
+    guid: 6a0bb8abd4b02ae46853b88f2e4a5eba
+  - enabled: 0
+    path: Assets/Rebirth/Scenes/MainScene 1.unity
+    guid: 52de32ade0473b14a9c7d60469d92647
   - enabled: 1
-    path: Assets/Rebirth/Scripts/GameOverScreen.unity
-    guid: 6ffd7dbbcc2788b408f18a39e78a9be5
+    path: Assets/XclaimR/Scenes/MainScene.unity
+    guid: 8309dcf7e5186bd489227ac45a49bbca
+  - enabled: 1
+    path: Assets/Rebirth/Scenes/HowToPlayScene.unity
+    guid: 36a171e312ce443428455daba6e7307d
+  - enabled: 1
+    path: Assets/Rebirth/Scenes/OptionsScene.unity
+    guid: 901b17bf798aa3941a848a52162ee300
+  - enabled: 1
+    path: Assets/Rebirth/Scenes/GameOverScene.unity
+    guid: 125bc51ef2699574da10defab40b861c
   m_configObjects: {}
