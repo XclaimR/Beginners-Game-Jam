@@ -23,7 +23,7 @@ public class SceneLoader : MonoBehaviour
         Debug.Log("Entered");
         gameObject.GetComponent<Lives>().SetLives();
         PlayerPrefs.SetInt("Lives", gameObject.GetComponent<Lives>().GetLives());
-        SceneManager.LoadScene("GameOverScene");
+        SceneManager.LoadScene("GameOver");
     }
 
     public void LoadRestartScene()
@@ -34,12 +34,12 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadOptionsScene()
     {
-        SceneManager.LoadScene("OptionsScene");
+        SceneManager.LoadScene("Options");
     }
 
     public void LoadHowToPlayScene()
     {
-        SceneManager.LoadScene("HowToPlayScene");
+        SceneManager.LoadScene("HowToPlay");
     }
 
     public void QuitGame()

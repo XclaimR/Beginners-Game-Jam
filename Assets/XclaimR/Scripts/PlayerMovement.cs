@@ -82,6 +82,10 @@ public class PlayerMovement : MonoBehaviour
             if (globalV.collected == globalV.totalCollectibles)
             {
                 Debug.Log("Entered");
+                GameObject timer = GameObject.Find("Timer");
+                float sTime = timer.GetComponent<Timer>().startTime;
+                Debug.Log("Finish Time : "+timer.GetComponent<Timer>().DisplayTime(Time.time - sTime));
+
                 //gameManager.GetComponent<SceneLoader>().LoadNextScene();
                 gameManager.GetComponent<SceneLoader>().LoadGameOverScene();
             }
