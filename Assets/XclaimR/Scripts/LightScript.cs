@@ -13,6 +13,9 @@ public class LightScript : MonoBehaviour
     GlobalVariables globalV;
     public float detectRate = 5f;
     float nextDetectTime = 0f;
+    public float coolDownRate = 20f;
+    float nextCoolDownTime = -1f;
+    bool detected = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +39,13 @@ public class LightScript : MonoBehaviour
             isTurn = true;
         }
         transform.position = fl_point.transform.position;
+
+        if (Time.time > nextCoolDownTime && detected == true)
+        {
+            globalV.NormalAlert();
+            detected = false;
+        }
+        //Debug.Log(nextCoolDownTime);
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -46,6 +56,8 @@ public class LightScript : MonoBehaviour
             if (Time.time >= nextDetectTime)
             {
                 nextDetectTime = Time.time + 1 / detectRate;
+                nextCoolDownTime = Time.time + coolDownRate;
+                detected = true;
                 globalV.RedAlert();
                // Debug.Log("Detected");
             }

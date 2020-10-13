@@ -21,11 +21,22 @@ public class GlobalVariables : MonoBehaviour
         snow.GetComponent<ParticleSystem>().Play();
     }
 
+    public void NormalAlert()
+    {
+        Debug.Log("Normal");
+        chances = 2;
+        enemySpeed = 0.5f;
+        playerSpeed = 5f;
+        lightColor = new Color(0.6320754f, 0.6320754f, 0.6320754f);
+        totalCollectibles = GameObject.FindGameObjectsWithTag("Collectible").Length;
+    }
+
     public void RedAlert()
     {
         chances--;
         if(chances == 0)
         {
+            Debug.Log("Game Over");
             GameOver();
         }
         enemySpeed = 2f;
