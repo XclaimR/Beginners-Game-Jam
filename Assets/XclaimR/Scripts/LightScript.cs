@@ -51,7 +51,7 @@ public class LightScript : MonoBehaviour
             //Destroy(collider.gameObject);
             if (Time.time >= globalV.nextDetectTime)
             {
-                globalV.nextDetectTime = Time.time + 1 / globalV.detectRate;
+                globalV.nextDetectTime = Time.time + globalV.detectRate;
                 globalV.nextCoolDownTime = Time.time + globalV.coolDownRate;
                 detected = true;
                 globalV.RedAlert();
