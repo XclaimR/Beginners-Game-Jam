@@ -48,6 +48,11 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = false;
             Jump();
         }
+
+        if(transform.position.y < -10f)
+        {
+            gameManager.GetComponent<Lives>().RemoveLives();
+        }
     }
 
     private void Jump()

@@ -20,6 +20,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadGameOverScene()
     {
+        Debug.Log("Entered");
         gameObject.GetComponent<Lives>().SetLives();
         PlayerPrefs.SetInt("Lives", gameObject.GetComponent<Lives>().GetLives());
         SceneManager.LoadScene("GameOverScene");
