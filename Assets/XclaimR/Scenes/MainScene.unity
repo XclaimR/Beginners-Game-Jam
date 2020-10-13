@@ -1656,6 +1656,21 @@ PrefabInstance:
       propertyPath: startDelay.scalar
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1508833090834590334, guid: 9d3cb7f8891e97144aefcfe8495d677a,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508833090834590334, guid: 9d3cb7f8891e97144aefcfe8495d677a,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508833090834590335, guid: 9d3cb7f8891e97144aefcfe8495d677a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d3cb7f8891e97144aefcfe8495d677a, type: 3}
 --- !u!1 &689812541

@@ -38,7 +38,7 @@ public class LightScript : MonoBehaviour
 
         if (Time.time > globalV.nextCoolDownTime && detected == true)
         {
-            globalV.NormalAlert();
+            globalV.NormalAlert();  
             detected = false;
         }
         //Debug.Log(nextCoolDownTime);
