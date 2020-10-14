@@ -836,6 +836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start: {fileID: 1624170914}
+  name: {fileID: 634144618}
 --- !u!61 &1624170917
 BoxCollider2D:
   m_ObjectHideFlags: 0
