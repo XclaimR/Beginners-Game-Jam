@@ -534,6 +534,7 @@ GameObject:
   - component: {fileID: 1624170915}
   - component: {fileID: 1624170914}
   - component: {fileID: 1624170916}
+  - component: {fileID: 1624170917}
   m_Layer: 5
   m_Name: PlayAgain
   m_TagString: Untagged
@@ -627,6 +628,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 195.46631, y: 24.417295}
   m_EdgeRadius: 0
+--- !u!114 &1624170917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624170912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa7b38eccc8c7d4784908ca1c879967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: {fileID: 1624170914}
 --- !u!1 &1761445852
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -84,12 +85,14 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("Entered");
                 GameObject timer = GameObject.Find("Timer");
                 float sTime = Time.time - timer.GetComponent<Timer>().startTime;
+                PlayerPrefs.SetFloat("Runtime", sTime);
                 string uname = PlayerPrefs.GetString("Username");
                 gameManager.GetComponent<ScoreboardConnection>().AddScoreboard(uname,(int)sTime*1000);
                 Debug.Log("Finish Time : "+timer.GetComponent<Timer>().DisplayTime(sTime));
 
                 //gameManager.GetComponent<SceneLoader>().LoadNextScene();
-                gameManager.GetComponent<SceneLoader>().LoadGameOverScene();
+                //gameManager.GetComponent<SceneLoader>().LoadGameOverScene();
+                SceneManager.LoadScene("Victory");
             }
         }
     }
