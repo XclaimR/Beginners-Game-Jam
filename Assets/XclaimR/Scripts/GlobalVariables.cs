@@ -10,7 +10,7 @@ public class GlobalVariables : MonoBehaviour
     [SerializeField] public int chances = 2;
     public float detectRate = 5f;
     public float nextDetectTime = 0f;
-    public float coolDownRate = 20f;
+    public float coolDownRate = 10f;
     public float nextCoolDownTime = -1f;
     public int collected = 0;
     public int totalCollectibles;

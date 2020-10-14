@@ -73,6 +73,10 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = true;
         }
 
+        if(collision.gameObject.tag == "Enemy")
+        {
+            gameManager.GetComponent<Lives>().RemoveLives();
+        }
         
     }
 
