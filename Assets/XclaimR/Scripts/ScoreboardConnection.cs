@@ -58,7 +58,7 @@ public class ScoreboardConnection : MonoBehaviour
 
     IEnumerator DownloadScoreboardfromDB()
     {
-        WWW www = new WWW(webURL + publicCode + "/pipe-asc/");
+        WWW www = new WWW(webURL + publicCode + "/pipe-asc/10/");
         yield return www;
 
         if (string.IsNullOrEmpty(www.error))
