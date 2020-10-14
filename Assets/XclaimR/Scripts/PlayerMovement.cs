@@ -83,8 +83,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 Debug.Log("Entered");
                 GameObject timer = GameObject.Find("Timer");
-                float sTime = timer.GetComponent<Timer>().startTime;
-                Debug.Log("Finish Time : "+timer.GetComponent<Timer>().DisplayTime(Time.time - sTime));
+                float sTime = Time.time - timer.GetComponent<Timer>().startTime;
+                string uname = PlayerPrefs.GetString("Username");
+                gameManager.GetComponent<ScoreboardConnection>().AddScoreboard(uname,(int)sTime*1000);
+                Debug.Log("Finish Time : "+timer.GetComponent<Timer>().DisplayTime(sTime));
 
                 //gameManager.GetComponent<SceneLoader>().LoadNextScene();
                 gameManager.GetComponent<SceneLoader>().LoadGameOverScene();

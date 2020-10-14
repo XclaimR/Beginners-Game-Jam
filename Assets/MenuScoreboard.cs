@@ -4,10 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class MenuStart : MonoBehaviour
+public class MenuScoreboard : MonoBehaviour
 {
     public Text start;
-    public Text name;
     private int fontSize;
     private Color tempColor;
     private AudioSource audio;
@@ -34,12 +33,6 @@ public class MenuStart : MonoBehaviour
 
     void OnMouseUp()
     {
-        string username = name.text;
-        PlayerPrefs.SetString("Username", username);
-        GameObject timer = GameObject.Find("Timer");
-        timer.GetComponent<Timer>().startTime = Time.time;
-        Debug.Log("Start Time : " + timer.GetComponent<Timer>().DisplayTime(timer.GetComponent<Timer>().startTime));
-        DontDestroyOnLoad(timer);
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("Scoreboard");
     }
 }

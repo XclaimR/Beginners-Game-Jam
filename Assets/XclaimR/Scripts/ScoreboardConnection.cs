@@ -22,20 +22,22 @@ public class ScoreboardConnection : MonoBehaviour
 
         entryTemplate.gameObject.SetActive(false);
 
-        AddScoreboard("Nishanth", 123);
-        AddScoreboard("Quinea", 345);
-        AddScoreboard("OddSheep", 567);
+        //AddScoreboard("Nishanth", 123);
+        //AddScoreboard("Quinea", 345);
+        //AddScoreboard("OddSheep", 567);
 
         DownloadScoreboard();
     }
 
-    public void AddScoreboard(string username,float time)
+    public void AddScoreboard(string username,int time)
     {
+        Debug.Log("In Addscoreboard"+username +" " + time);
         StartCoroutine(UploadScoreboard(username, time));
     }
 
-    IEnumerator UploadScoreboard(string username, float time)
+    IEnumerator UploadScoreboard(string username, int time)
     {
+        Debug.Log("In Uploadscoreboard" + username + " " + time);
         WWW www = new WWW(webURL + privateCode + "/add/" + WWW.EscapeURL(username) + "/" + time);
         yield return www;
 
@@ -79,8 +81,8 @@ public class ScoreboardConnection : MonoBehaviour
         {
             string[] entryInfo = entries[i].Split(new char[] { '|' });
             string uname = entryInfo[0];
-            float score = float.Parse(entryInfo[1]);
-            scoreboardList[i] = new ScoreboardEntry(uname, score);
+            int time = int.Parse(entryInfo[1]);
+            scoreboardList[i] = new ScoreboardEntry(uname, time);
             Debug.Log(scoreboardList[i].name + " " + scoreboardList[i].time);
             CreateScoreboardEntry(scoreboardList[i], entryContainer, i);
         }
@@ -116,8 +118,10 @@ public class ScoreboardConnection : MonoBehaviour
         }
         entryTransform.Find("Position").GetComponent<Text>().text = rankString;
 
-        float time = scoreboardEntry.time;
-        entryTransform.Find("Time").GetComponent<Text>().text = time.ToString();
+        float time = scoreboardEntry.time/1000;
+        GameObject timer = GameObject.Find("Timer");
+        
+        entryTransform.Find("Time").GetComponent<Text>().text = timer.GetComponent<Timer>().DisplayTime(time);
 
         string name = scoreboardEntry.name;
         entryTransform.Find("Name").GetComponent<Text>().text = name;
@@ -128,10 +132,10 @@ public class ScoreboardConnection : MonoBehaviour
 
     public class ScoreboardEntry
     {
-        public float time;
+        public int time;
         public string name;
 
-        public ScoreboardEntry(string uname, float _time)
+        public ScoreboardEntry(string uname, int _time)
         {
             name = uname;
             time = _time;

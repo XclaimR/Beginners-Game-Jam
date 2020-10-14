@@ -33,7 +33,7 @@ public class GlobalVariables : MonoBehaviour
         enemySpeed = 0.5f;
         playerSpeed = 5f;
         lightColor = new Color(0.6320754f, 0.6320754f, 0.6320754f);
-        totalCollectibles = GameObject.FindGameObjectsWithTag("Collectible").Length;
+        //totalCollectibles = GameObject.FindGameObjectsWithTag("Collectible").Length;
     }
 
     public void RedAlert()
@@ -52,6 +52,6 @@ public class GlobalVariables : MonoBehaviour
     void GameOver()
     {
         Lives lives = gameObject.GetComponent<Lives>();
-        lives.RemoveLives();
+        //lives.RemoveLives();
     }
 }

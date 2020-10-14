@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/XclaimR/Scenes/MainMenu.unity
     guid: 5f4e1257c63b1c14db3a45d66f0b74b8
   - enabled: 1
+    path: Assets/XclaimR/Scenes/EnterName.unity
+    guid: 4cffda9aa8880784eb699409788aa488
+  - enabled: 1
     path: Assets/XclaimR/Scenes/HowToPlay.unity
     guid: fb5cdfe08eb67de468c58c9a31089831
   - enabled: 1
@@ -23,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/XclaimR/Scenes/Victory.unity
     guid: c73a8b24992587c47b951ebff1f8f875
+  - enabled: 1
+    path: Assets/XclaimR/Scenes/Scoreboard.unity
+    guid: 18f00b160f51af74da1378757ee548ac
   m_configObjects: {}
