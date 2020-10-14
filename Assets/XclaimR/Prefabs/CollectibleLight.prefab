@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5600173779252050935}
   - component: {fileID: 3688661738693679812}
   m_Layer: 0
-  m_Name: Point Light 2D
+  m_Name: CollectibleLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
