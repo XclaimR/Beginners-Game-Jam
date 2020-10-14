@@ -19,6 +19,9 @@ public class Collectible : MonoBehaviour
         {
             Debug.Log("Collected");
             globalV.collected++;
+            GameObject reactorPiece = GameObject.Find(gameObject.GetComponent<SpriteRenderer>().sprite.name);
+            reactorPiece.GetComponent<SpriteRenderer>().color = Color.white;
+            Debug.Log(gameObject.GetComponent<SpriteRenderer>().sprite.name);
             Destroy(gameObject);
         }
     }
