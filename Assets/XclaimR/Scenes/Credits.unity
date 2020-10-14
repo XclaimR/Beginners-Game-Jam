@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 967253268}
   - component: {fileID: 967253267}
   m_Layer: 5
-  m_Name: HowToPlay
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -391,7 +391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 130}
+  m_AnchoredPosition: {x: 0, y: 156}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &967253267
@@ -426,9 +426,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'How To Play
-
-'
+  m_Text: Credits
 --- !u!222 &967253268
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -813,7 +811,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.514885, y: 15.150041}
+  m_Offset: {x: 0.7576027, y: 16.665035}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -824,5 +822,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 70.66522, y: 17.664995}
+  m_Size: {x: 64.60738, y: 17.665024}
   m_EdgeRadius: 0
