@@ -33,7 +33,8 @@ public class GlobalVariables : MonoBehaviour
         chances = 2;
         enemySpeed = 0.5f;
         playerSpeed = 5f;
-        lightColor = new Color(0.6320754f, 0.6320754f, 0.6320754f);
+        lightColor = new Color(0.7924528f, 0.2527757f, 0.1308295f);
+        //lightColor = new Color(0.6320754f, 0.6320754f, 0.6320754f);
         //totalCollectibles = GameObject.FindGameObjectsWithTag("Collectible").Length;
     }
 
