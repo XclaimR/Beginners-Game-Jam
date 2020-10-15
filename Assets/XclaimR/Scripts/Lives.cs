@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Lives : MonoBehaviour
 {
     [SerializeField] int lives = 3;
+
+    public GameObject message;
 
     void Awake()
     {
@@ -37,6 +40,13 @@ public class Lives : MonoBehaviour
     {
         lives--;
         PlayerPrefs.SetInt("Lives",lives);
+        message.GetComponent<Text>().enabled = true;
+        Invoke("LoadScene", 2);
+        
+    }
+
+    public void LoadScene()
+    {
         if (GetLives() <= 0)
         {
             FindObjectOfType<SceneLoader>().LoadGameOverScene();
