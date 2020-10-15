@@ -53,6 +53,6 @@ public class GlobalVariables : MonoBehaviour
     void GameOver()
     {
         Lives lives = gameObject.GetComponent<Lives>();
-        //lives.RemoveLives();
+        lives.RemoveLives();
     }
 }

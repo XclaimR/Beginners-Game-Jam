@@ -22,14 +22,16 @@ public class ScoreboardConnection : MonoBehaviour
         {
             entryContainer = transform.Find("EntryContainer");
             entryTemplate = entryContainer.Find("EntryTemplate");
+            entryTemplate.gameObject.SetActive(false);
+            DownloadScoreboard();
         }
-        entryTemplate.gameObject.SetActive(false);
+        
 
         //AddScoreboard("Nishanth", 123);
         //AddScoreboard("Quinea", 345);
         //AddScoreboard("OddSheep", 567);
 
-        DownloadScoreboard();
+        
     }
 
     public void AddScoreboard(string username,int time)
