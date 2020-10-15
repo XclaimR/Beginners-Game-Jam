@@ -48,6 +48,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Camera
+    uniqueID: 3209477143
+    locked: 0
+  - name: NPC
+    uniqueID: 2475061127
+    locked: 0
   - name: Collectible
     uniqueID: 3266458271
     locked: 0
