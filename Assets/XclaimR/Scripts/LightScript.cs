@@ -5,8 +5,9 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class LightScript : MonoBehaviour
 {
-    public GameObject fl_point;
-    public EnemyMovement eMove;
+    GameObject fl_point;
+    EnemyMovement eMove;
+    public GameObject Enemy;
     bool isTurn = true;
     Light2D lt;
     GameObject gameManager;
@@ -16,6 +17,8 @@ public class LightScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        fl_point = Enemy.transform.GetChild(4).gameObject;
+        eMove = Enemy.GetComponent<EnemyMovement>();
         lt = GetComponent<Light2D>();
         gameManager = GameObject.Find("GameManager");
         globalV = gameManager.GetComponent<GlobalVariables>();

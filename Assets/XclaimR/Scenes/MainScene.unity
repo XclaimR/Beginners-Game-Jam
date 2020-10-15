@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20749141, g: 0.2114749, b: 0.14576823, a: 1}
+  m_IndirectSpecularColor: {r: 0.20749113, g: 0.2114747, b: 0.1457682, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1455,7 +1455,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1028509025
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 5
   m_Sprite: {fileID: -5643372064783690318, guid: 5242da3f433c44d299b57ac7c7352994,
     type: 3}
@@ -1668,7 +1668,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1028509025
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 5
   m_Sprite: {fileID: -1803520923961663517, guid: 5242da3f433c44d299b57ac7c7352994,
     type: 3}
@@ -2003,7 +2003,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1028509025
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 5
   m_Sprite: {fileID: -6601716673187530752, guid: 5242da3f433c44d299b57ac7c7352994,
     type: 3}
@@ -3042,6 +3042,11 @@ PrefabInstance:
       propertyPath: eMove
       value: 
       objectReference: {fileID: 369718386}
+    - target: {fileID: 6819548426170674413, guid: f0c677c7c3f94ca4aa2fa677fce25180,
+        type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 369718385}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c677c7c3f94ca4aa2fa677fce25180, type: 3}
 --- !u!1 &1058197580
@@ -3684,6 +3689,11 @@ PrefabInstance:
       propertyPath: eMove
       value: 
       objectReference: {fileID: 2124258123}
+    - target: {fileID: 6819548426170674413, guid: f0c677c7c3f94ca4aa2fa677fce25180,
+        type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 2124258121}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c677c7c3f94ca4aa2fa677fce25180, type: 3}
 --- !u!1 &1205676126
@@ -3889,7 +3899,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1028509025
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 5
   m_Sprite: {fileID: -7735512747723457213, guid: 5242da3f433c44d299b57ac7c7352994,
     type: 3}
@@ -4376,6 +4386,11 @@ PrefabInstance:
       propertyPath: eMove
       value: 
       objectReference: {fileID: 1416818328}
+    - target: {fileID: 6819548426170674413, guid: f0c677c7c3f94ca4aa2fa677fce25180,
+        type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1416818327}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c677c7c3f94ca4aa2fa677fce25180, type: 3}
 --- !u!1 &1320907792
@@ -4446,7 +4461,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1028509025
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 5
   m_Sprite: {fileID: -6361169193134445006, guid: 5242da3f433c44d299b57ac7c7352994,
     type: 3}
@@ -6251,7 +6266,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1028509025
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 5
   m_Sprite: {fileID: -4609640504858625912, guid: 5242da3f433c44d299b57ac7c7352994,
     type: 3}
@@ -7962,12 +7977,12 @@ PrefabInstance:
     - target: {fileID: 6819548426170674410, guid: f0c677c7c3f94ca4aa2fa677fce25180,
         type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[1]
-      value: -1028509025
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6819548426170674410, guid: f0c677c7c3f94ca4aa2fa677fce25180,
         type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[0]
-      value: -1028509025
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6819548426170674411, guid: f0c677c7c3f94ca4aa2fa677fce25180,
         type: 3}
@@ -8164,6 +8179,11 @@ PrefabInstance:
       propertyPath: eMove
       value: 
       objectReference: {fileID: 2124879485}
+    - target: {fileID: 6819548426170674413, guid: f0c677c7c3f94ca4aa2fa677fce25180,
+        type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 2124879484}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c677c7c3f94ca4aa2fa677fce25180, type: 3}
 --- !u!1001 &7320963338665644511

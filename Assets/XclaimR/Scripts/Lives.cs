@@ -41,6 +41,13 @@ public class Lives : MonoBehaviour
         lives--;
         PlayerPrefs.SetInt("Lives",lives);
         message.GetComponent<Text>().enabled = true;
+        GameObject player = GameObject.Find("Orb");
+        player.GetComponent<PlayerMovement>().enabled = false;
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach(GameObject enemy in enemies)
+        {
+            enemy.GetComponent<EnemyMovement>().enabled = false;
+        }
         Invoke("LoadScene", 2);
         
     }
