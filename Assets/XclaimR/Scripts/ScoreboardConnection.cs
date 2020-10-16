@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreboardConnection : MonoBehaviour
 {
@@ -17,16 +18,20 @@ public class ScoreboardConnection : MonoBehaviour
     void Awake()
     {
 
-        entryContainer = transform.Find("EntryContainer");
-        entryTemplate = entryContainer.Find("EntryTemplate");
-
-        entryTemplate.gameObject.SetActive(false);
+        if (SceneManager.GetActiveScene().name == "Scoreboard")
+        {
+            entryContainer = transform.Find("EntryContainer");
+            entryTemplate = entryContainer.Find("EntryTemplate");
+            entryTemplate.gameObject.SetActive(false);
+            DownloadScoreboard();
+        }
+        
 
         //AddScoreboard("Nishanth", 123);
         //AddScoreboard("Quinea", 345);
         //AddScoreboard("OddSheep", 567);
 
-        DownloadScoreboard();
+        
     }
 
     public void AddScoreboard(string username,int time)
