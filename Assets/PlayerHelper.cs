@@ -11,6 +11,7 @@ public class PlayerHelper : MonoBehaviour
     {
         if (collider.gameObject.tag == "Helper")
         {
+            gameObject.transform.Find("Canvas").gameObject.SetActive(true);
             if (Input.GetKey(KeyCode.E) && isDone && !isClose)
             {
                 isDone = false;
@@ -27,6 +28,10 @@ public class PlayerHelper : MonoBehaviour
                 collider.gameObject.transform.GetChild(0).gameObject.SetActive(false);
                 gameObject.GetComponent<PlayerMovement>().enabled = true;
             }
+        }
+        else
+        {
+            gameObject.transform.Find("Canvas").gameObject.SetActive(false);
         }
     }
 
