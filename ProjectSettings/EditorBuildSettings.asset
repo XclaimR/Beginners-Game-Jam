@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/XclaimR/Scenes/Options.unity
     guid: 19004b194cabec347ace3c336b789c1c
   - enabled: 1
-    path: Assets/XclaimR/Scenes/MainScene.unity
+    path: Assets/XclaimR/Scenes/Planet 1.unity
     guid: 8309dcf7e5186bd489227ac45a49bbca
   - enabled: 1
     path: Assets/XclaimR/Scenes/GameOver.unity
