@@ -47,7 +47,7 @@ public class LightScript : MonoBehaviour
         //Debug.Log(nextCoolDownTime);
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnTriggerStay2D(Collider2D collider)
     {
         if(collider.gameObject.tag == "Player")
         {

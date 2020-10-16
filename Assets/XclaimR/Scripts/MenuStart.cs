@@ -40,6 +40,6 @@ public class MenuStart : MonoBehaviour
         timer.GetComponent<Timer>().startTime = Time.time;
         Debug.Log("Start Time : " + timer.GetComponent<Timer>().DisplayTime(timer.GetComponent<Timer>().startTime));
         DontDestroyOnLoad(timer);
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("Planet 1");
     }
 }
