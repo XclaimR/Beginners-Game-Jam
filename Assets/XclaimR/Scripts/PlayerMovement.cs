@@ -87,16 +87,23 @@ public class PlayerMovement : MonoBehaviour
             if (globalV.collected == globalV.totalCollectibles)
             {
                 Debug.Log("Entered");
-                GameObject timer = GameObject.Find("Timer");
-                float sTime = Time.time - timer.GetComponent<Timer>().startTime;
-                PlayerPrefs.SetFloat("Runtime", sTime);
-                string uname = PlayerPrefs.GetString("Username");
-                gameManager.GetComponent<ScoreboardConnection>().AddScoreboard(uname,(int)sTime*1000);
-                Debug.Log("Finish Time : "+timer.GetComponent<Timer>().DisplayTime(sTime));
-
                 //gameManager.GetComponent<SceneLoader>().LoadNextScene();
                 //gameManager.GetComponent<SceneLoader>().LoadGameOverScene();
-                SceneManager.LoadScene("Victory");
+                if (SceneManager.GetActiveScene().buildIndex + 1 != 7)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+                else
+                {
+                    GameObject timer = GameObject.Find("Timer");
+                    float sTime = Time.time - timer.GetComponent<Timer>().startTime;
+                    PlayerPrefs.SetFloat("Runtime", sTime);
+                    string uname = PlayerPrefs.GetString("Username");
+                    gameManager.GetComponent<ScoreboardConnection>().AddScoreboard(uname, (int)sTime * 1000);
+                    Debug.Log("Finish Time : " + timer.GetComponent<Timer>().DisplayTime(sTime));
+                    SceneManager.LoadScene("Victory");
+                }
+                    
             }
         }
     }
