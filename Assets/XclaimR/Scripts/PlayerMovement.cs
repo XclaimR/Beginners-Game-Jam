@@ -106,6 +106,11 @@ public class PlayerMovement : MonoBehaviour
                     
             }
         }
+
+        if(collider.gameObject.tag == "Enemy")
+        {
+            gameManager.GetComponent<Lives>().RemoveLives();
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
