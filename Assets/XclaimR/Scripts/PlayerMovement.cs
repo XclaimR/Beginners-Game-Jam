@@ -10,13 +10,17 @@ public class PlayerMovement : MonoBehaviour
     //[SerializeField] float jumpSpeed = 5f;
 
     [SerializeField]public bool isGrounded = false;
-
+    public bool isPlaying = false;
 
     Vector3 vector;
 
     Rigidbody2D body;
     GameObject gameManager;
     GlobalVariables globalV;
+
+    public AudioSource playerWalk;
+    private AudioSource playerJump;
+    private AudioSource playerLand;
 
     public Animator animator;
 
@@ -26,6 +30,17 @@ public class PlayerMovement : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         gameManager = GameObject.Find("GameManager");
         globalV = gameManager.GetComponent<GlobalVariables>();
+        if(SceneManager.GetActiveScene().name == "Planet 1")
+        {
+            playerWalk = GameObject.Find("SnowFS").GetComponent<AudioSource>();
+        }
+        if(SceneManager.GetActiveScene().name == "Planet 2")
+        {
+            playerWalk = GameObject.Find("MetalFS").GetComponent<AudioSource>();
+        }
+            
+        playerJump = GameObject.Find("JumpSound").GetComponent<AudioSource>();
+        playerLand = GameObject.Find("LandSound").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,9 +55,23 @@ public class PlayerMovement : MonoBehaviour
         vector.x = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         animator.SetFloat("isMove", Mathf.Abs(vector.x));
         transform.position += vector;
+        //Debug.Log(Input.GetAxis("Horizontal"));
+        if (!isPlaying && vector.x != 0 && body.velocity.y == 0)
+        {
+            //Debug.Log("Entered");
+            isPlaying = true;
+            playerWalk.Play();
+        }
+        else if(isPlaying && vector.x == 0)
+        {
+            playerWalk.Stop();
+            isPlaying = false;
+        }
+            
 
         if (Input.GetButton("Jump") && isGrounded && body.velocity.y == 0)
         {
+            playerWalk.Stop();
             //Debug.Log("Jump");
             animator.SetTrigger("isJump");
             //animator.SetBool("Jump", true);
@@ -58,8 +87,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        
-        
+        playerJump.Play();
         body.AddForce(new Vector2(0,jumpHeight), ForceMode2D.Impulse);
     }
 
@@ -68,6 +96,8 @@ public class PlayerMovement : MonoBehaviour
         //Physics.IgnoreLayerCollision(8, 12, (.velocity.y > 0.0f));
         if (collision.gameObject.tag == "Ground")
         {
+            playerLand.Play();
+            isPlaying = false;
             animator.ResetTrigger("isJump");
             //animator.SetBool("Jump", false);
             isGrounded = true;

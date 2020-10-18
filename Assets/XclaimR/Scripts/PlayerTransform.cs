@@ -13,12 +13,15 @@ public class PlayerTransform : MonoBehaviour
     Vector3 vector;
     public PlayerMovement pm;
     CinemachineVirtualCamera vcam;
+
+    private AudioSource transformSound;
     // Start is called before the first frame update
     void Start()
     {
         x_scale = alien.transform.localScale.x;
         y_scale = alien.transform.localScale.y;
         vcam = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
+        transformSound = GameObject.Find("transformSound").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,17 +40,20 @@ public class PlayerTransform : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) && pm.isGrounded)
         {
             //vcam.Follow = human.transform;
+            transformSound.Play();
             alien.transform.GetChild(0).gameObject.SetActive(false);
             alien.transform.GetChild(1).gameObject.SetActive(false);
             alien.GetComponent<BoxCollider2D>().enabled = false;
             alien.GetComponent<Rigidbody2D>().gravityScale = 0;
             alien.GetComponent<PlayerMovement>().enabled = false;
+            alien.GetComponent<PlayerMovement>().playerWalk.Stop();
             //human.GetComponent<SpriteRenderer>().enabled = true;
             human.SetActive(true);
         }
         if (Input.GetKeyUp(KeyCode.W) && pm.isGrounded)
         {
             //vcam.Follow = alien.transform;
+            transformSound.Play();
             alien.transform.GetChild(0).gameObject.SetActive(true);
             alien.transform.GetChild(1).gameObject.SetActive(true);
             alien.GetComponent<BoxCollider2D>().enabled = true;
