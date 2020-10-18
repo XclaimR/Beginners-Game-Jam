@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/XclaimR/Scenes/Scoreboard.unity
     guid: 18f00b160f51af74da1378757ee548ac
+  - enabled: 1
+    path: Assets/XclaimR/Scenes/Story.unity
+    guid: f788a9608e63cdb4aaff6a973369a700
   m_configObjects: {}
