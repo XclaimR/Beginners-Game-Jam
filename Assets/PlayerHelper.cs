@@ -4,44 +4,53 @@ using UnityEngine;
 
 public class PlayerHelper : MonoBehaviour
 {
-    bool isDone = true;
-    bool isClose = false;
+    public bool isDone = true;
+    public bool isClose = false;
+    GameObject player;
+
+    public Dialogue dialogue;
+
+    //public void TriggerDialogue()
+    //{
+        
+    //}
 
     void OnTriggerStay2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Helper")
+        if (collider.gameObject.tag == "Player")
         {
-            gameObject.transform.Find("Canvas").gameObject.SetActive(true);
+            //player = collider.gameObject;
+            collider.gameObject.transform.Find("Canvas").gameObject.SetActive(true);
             if (Input.GetKey(KeyCode.E) && isDone && !isClose)
             {
+                gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                collider.gameObject.GetComponent<PlayerMovement>().enabled = false;
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
                 isDone = false;
-                Invoke("Close", 2);
+                //Invoke("Close", 2);
                 Debug.Log(collider.gameObject.transform.GetChild(0).name);
-                collider.gameObject.transform.GetChild(0).gameObject.SetActive(true);
-                gameObject.GetComponent<PlayerMovement>().enabled = false;
+                
             }
 
-            if(Input.GetKey(KeyCode.E) && !isDone && isClose)
+            if((Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.Return)) && !isDone && isClose)
             {
-                Invoke("Done", 2);
+                //Invoke("Done", 2);
                 isClose = false;
-                collider.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-                gameObject.GetComponent<PlayerMovement>().enabled = true;
+                gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                collider.gameObject.GetComponent<PlayerMovement>().enabled = true;
             }
         }
-        else
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "Player")
         {
-            gameObject.transform.Find("Canvas").gameObject.SetActive(false);
+            Debug.Log("Exited");
+            collider.gameObject.transform.Find("Canvas").gameObject.SetActive(false);
+            bool isDone = true;
+            bool isClose = false;
         }
-    }
 
-    void Close()
-    {
-        isClose = true;
-    }
-
-    void Done()
-    {
-        isDone = true;
     }
 }
