@@ -12,6 +12,8 @@ TagManager:
   - UFO
   - Transform
   - Helper
+  - StartPoint
+  - Destroy
   layers:
   - Default
   - TransparentFX
