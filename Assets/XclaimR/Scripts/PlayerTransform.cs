@@ -47,6 +47,11 @@ public class PlayerTransform : MonoBehaviour
             alien.GetComponent<Rigidbody2D>().gravityScale = 0;
             alien.GetComponent<PlayerMovement>().enabled = false;
             alien.GetComponent<PlayerMovement>().playerWalk.Stop();
+            /*if (!deathVFX) { return; }
+
+            GameObject deathVFXObject = Instantiate(deathVFX, transform.position, Quaternion.identity);
+
+            Destroy(deathVFXObject, 1f);*/
             //human.GetComponent<SpriteRenderer>().enabled = true;
             human.SetActive(true);
         }
