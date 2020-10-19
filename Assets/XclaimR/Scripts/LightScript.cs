@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class LightScript : MonoBehaviour
 {
@@ -17,7 +18,10 @@ public class LightScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fl_point = Enemy.transform.GetChild(4).gameObject;
+        if(SceneManager.GetActiveScene().name == "Planet 1")
+            fl_point = Enemy.transform.GetChild(4).gameObject;
+        if (SceneManager.GetActiveScene().name == "Planet 2")
+            fl_point = Enemy.transform.GetChild(3).gameObject;
         eMove = Enemy.GetComponent<EnemyMovement>();
         lt = GetComponent<Light2D>();
         gameManager = GameObject.Find("GameManager");

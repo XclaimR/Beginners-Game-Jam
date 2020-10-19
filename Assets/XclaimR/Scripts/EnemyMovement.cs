@@ -29,6 +29,14 @@ public class EnemyMovement : MonoBehaviour
     {
         speed = globalV.enemySpeed;
         // Use this for initialization
+        if (isPause)
+        {
+            gameObject.GetComponent<Animator>().enabled = false;
+        }
+        if (!isPause)
+        {
+            gameObject.GetComponent<Animator>().enabled = true;
+        }
         if (MoveRight && !isPause)
         {
             transform.Translate(2 * Time.deltaTime * speed, 0, 0);
@@ -39,6 +47,7 @@ public class EnemyMovement : MonoBehaviour
             transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
             transform.localScale = new Vector2(-x_scale, y_scale);
         }
+        
     }
 
     void OnTriggerEnter2D(Collider2D trig)
