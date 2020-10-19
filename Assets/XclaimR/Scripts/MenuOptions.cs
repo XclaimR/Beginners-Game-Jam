@@ -16,13 +16,13 @@ public class MenuOptions : MonoBehaviour
     {
         tempColor = options.color;
         fontSize = options.fontSize;
-        //audio = GetComponent<AudioSource>();
+        audio = GameObject.Find("MenuSound").GetComponent<AudioSource>();
     }
 
     void OnMouseEnter()
     {
         options.fontSize = fontSize + 5;
-        //audio.Play();
+        audio.Play();
     }
 
     void OnMouseExit()

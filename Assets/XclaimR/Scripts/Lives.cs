@@ -8,6 +8,7 @@ public class Lives : MonoBehaviour
     [SerializeField] int lives = 3;
 
     public GameObject message;
+    private AudioSource playerCaught;
 
     void Awake()
     {
@@ -18,6 +19,7 @@ public class Lives : MonoBehaviour
     void Start()
     {
         lives = PlayerPrefs.GetInt("Lives");
+        playerCaught = GameObject.Find("caughtSound").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -41,6 +43,7 @@ public class Lives : MonoBehaviour
         lives--;
         PlayerPrefs.SetInt("Lives",lives);
         message.GetComponent<Text>().enabled = true;
+        playerCaught.Play();
         GameObject player = GameObject.Find("Orb");
         player.GetComponent<PlayerMovement>().enabled = false;
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");

@@ -17,13 +17,13 @@ public class MenuStory : MonoBehaviour
     {
         tempColor = start.color;
         fontSize = start.fontSize;
-        //audio = GetComponent<AudioSource>();
+        audio = GameObject.Find("MenuSound").GetComponent<AudioSource>();
     }
 
     void OnMouseEnter()
     {
         start.fontSize = fontSize + 5;
-        //audio.Play();
+        audio.Play();
     }
 
     void OnMouseExit()

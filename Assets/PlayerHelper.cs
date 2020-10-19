@@ -9,11 +9,20 @@ public class PlayerHelper : MonoBehaviour
     GameObject player;
 
     public Dialogue dialogue;
+    
+    private AudioSource dialogueOpen;
+    private AudioSource dialogueClose;
 
     //public void TriggerDialogue()
     //{
-        
+
     //}
+
+    void Start()
+    {
+        dialogueOpen = GameObject.Find("dialogueOpen").GetComponent<AudioSource>();
+        dialogueClose = GameObject.Find("dialogueClose").GetComponent<AudioSource>();
+    }
 
     void OnTriggerStay2D(Collider2D collider)
     {
@@ -23,9 +32,11 @@ public class PlayerHelper : MonoBehaviour
             collider.gameObject.transform.Find("Canvas").gameObject.SetActive(true);
             if (Input.GetKey(KeyCode.E) && isDone && !isClose)
             {
+                collider.gameObject.GetComponent<PlayerMovement>().playerWalk.Stop();
                 gameObject.transform.GetChild(0).gameObject.SetActive(true);
                 collider.gameObject.GetComponent<PlayerMovement>().enabled = false;
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+                dialogueOpen.Play();
                 isDone = false;
                 //Invoke("Close", 2);
                 Debug.Log(collider.gameObject.transform.GetChild(0).name);
@@ -36,6 +47,7 @@ public class PlayerHelper : MonoBehaviour
             {
                 //Invoke("Done", 2);
                 isClose = false;
+                dialogueClose.Play();
                 gameObject.transform.GetChild(0).gameObject.SetActive(false);
                 collider.gameObject.GetComponent<PlayerMovement>().enabled = true;
             }

@@ -16,13 +16,13 @@ public class MenuHowToPlay : MonoBehaviour
     {
         tempColor = htp.color;
         fontSize = htp.fontSize;
-        //audio = GetComponent<AudioSource>();
+        audio = GameObject.Find("MenuSound").GetComponent<AudioSource>();
     }
 
     void OnMouseEnter()
     {
         htp.fontSize = fontSize + 5;
-        //audio.Play();
+        audio.Play();
     }
 
     void OnMouseExit()

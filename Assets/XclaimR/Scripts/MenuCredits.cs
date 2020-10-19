@@ -16,13 +16,13 @@ public class MenuCredits : MonoBehaviour
     {
         tempColor = credits.color;
         fontSize = credits.fontSize;
-        //audio = GetComponent<AudioSource>();
+        audio = GameObject.Find("MenuSound").GetComponent<AudioSource>();
     }
 
     void OnMouseEnter()
     {
         credits.fontSize = fontSize + 5;
-        //audio.Play();
+        audio.Play();
     }
 
     void OnMouseExit()

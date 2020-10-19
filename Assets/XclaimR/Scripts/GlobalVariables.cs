@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GlobalVariables : MonoBehaviour
 {
@@ -21,7 +22,15 @@ public class GlobalVariables : MonoBehaviour
         enemySpeed = 0.5f;
         playerSpeed = 5f;
         //lightColor = new Color(0.6320754f, 0.6320754f, 0.6320754f);
-        //lightColor = new Color(0.7924528f, 0.2527757f, 0.1308295f);
+        if(SceneManager.GetActiveScene().name == "Planet 1")
+        {
+            lightColor = new Color(0.7924528f, 0.2527757f, 0.1308295f);
+        }
+        if (SceneManager.GetActiveScene().name == "Planet 2")
+        {
+            lightColor = new Color(0.6320754f, 0.6320754f, 0.6320754f);
+        }
+
         totalCollectibles = GameObject.FindGameObjectsWithTag("Collectible").Length;
     }
 
@@ -31,7 +40,14 @@ public class GlobalVariables : MonoBehaviour
         chances = 2;
         enemySpeed = 0.5f;
         playerSpeed = 5f;
-        lightColor = new Color(0.7924528f, 0.2527757f, 0.1308295f);
+        if (SceneManager.GetActiveScene().name == "Planet 1")
+        {
+            lightColor = new Color(0.7924528f, 0.2527757f, 0.1308295f);
+        }
+        if (SceneManager.GetActiveScene().name == "Planet 2")
+        {
+            lightColor = new Color(0.6320754f, 0.6320754f, 0.6320754f);
+        }
         //lightColor = new Color(0.6320754f, 0.6320754f, 0.6320754f);
         //totalCollectibles = GameObject.FindGameObjectsWithTag("Collectible").Length;
     }
