@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 77188463}
   - component: {fileID: 77188464}
   m_Layer: 0
-  m_Name: DialogueSound
+  m_Name: dialogueSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -693,6 +693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1072845985}
+  dialogueSound: {fileID: 0}
 --- !u!4 &140251615
 Transform:
   m_ObjectHideFlags: 0
