@@ -20,7 +20,7 @@ public class LightScript : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().name == "Planet 1")
             fl_point = Enemy.transform.GetChild(4).gameObject;
-        if (SceneManager.GetActiveScene().name == "Planet 2")
+        if (SceneManager.GetActiveScene().name == "Planet 2" || SceneManager.GetActiveScene().name == "Planet 3") //CHANGE ONCE BOSS IS MADE
             fl_point = Enemy.transform.GetChild(3).gameObject;
         eMove = Enemy.GetComponent<EnemyMovement>();
         lt = GetComponent<Light2D>();
