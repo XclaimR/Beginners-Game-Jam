@@ -16,7 +16,6 @@ public class GlobalVariables : MonoBehaviour
     public int collected = 0;
     public int totalCollectibles;
 
-
     void Start()
     {
         enemySpeed = 0.5f;

@@ -8,10 +8,12 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     public Text dialogueText;
     bool isTyping = false;
+    public AudioSource dialogueSound;
 
     // Start is called before the first frame update
     void Start()
     {
+        dialogueSound = GameObject.Find("dialogueSound").GetComponent<AudioSource>();
         sentences = new Queue<string>();
     }
 
@@ -19,6 +21,7 @@ public class DialogueManager : MonoBehaviour
     {
         if ((Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.E)) && isTyping == false)
         {
+            
             DisplayNextSentence();
         }
     }
@@ -27,8 +30,8 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("Starting Dialogue");
         sentences.Clear();
-
-        foreach(string sentence in dialogue.sentences)
+        
+        foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
@@ -49,6 +52,7 @@ public class DialogueManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         isTyping = true;
+        dialogueSound.Play();
         StartCoroutine(TypeSentence(sentence));
     }
 
@@ -60,6 +64,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += letter;
             yield return null;
         }
+        dialogueSound.Stop();
         isTyping = false;
     }
 

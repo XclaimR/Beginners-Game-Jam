@@ -22,6 +22,7 @@ public class PlayerHelper : MonoBehaviour
     {
         dialogueOpen = GameObject.Find("dialogueOpen").GetComponent<AudioSource>();
         dialogueClose = GameObject.Find("dialogueClose").GetComponent<AudioSource>();
+        
     }
 
     void OnTriggerStay2D(Collider2D collider)
