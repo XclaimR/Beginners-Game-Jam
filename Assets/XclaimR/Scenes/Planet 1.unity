@@ -3807,7 +3807,7 @@ PrefabInstance:
     - target: {fileID: 6819548426170674410, guid: f0c677c7c3f94ca4aa2fa677fce25180,
         type: 3}
       propertyPath: m_PointLightInnerAngle
-      value: 0
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 6819548426170674410, guid: f0c677c7c3f94ca4aa2fa677fce25180,
         type: 3}
@@ -4527,7 +4527,7 @@ PrefabInstance:
     - target: {fileID: 6819548426170674410, guid: f0c677c7c3f94ca4aa2fa677fce25180,
         type: 3}
       propertyPath: m_PointLightInnerAngle
-      value: 0
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 6819548426170674410, guid: f0c677c7c3f94ca4aa2fa677fce25180,
         type: 3}
@@ -5368,7 +5368,7 @@ PrefabInstance:
     - target: {fileID: 6819548426170674410, guid: f0c677c7c3f94ca4aa2fa677fce25180,
         type: 3}
       propertyPath: m_PointLightInnerAngle
-      value: 0
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 6819548426170674410, guid: f0c677c7c3f94ca4aa2fa677fce25180,
         type: 3}
@@ -9775,7 +9775,7 @@ PrefabInstance:
     - target: {fileID: 6819548426170674410, guid: f0c677c7c3f94ca4aa2fa677fce25180,
         type: 3}
       propertyPath: m_PointLightInnerAngle
-      value: 0
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 6819548426170674410, guid: f0c677c7c3f94ca4aa2fa677fce25180,
         type: 3}
