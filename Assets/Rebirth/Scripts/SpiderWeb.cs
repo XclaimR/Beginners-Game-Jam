@@ -14,6 +14,7 @@ public class SpiderWeb : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             GlobalVarSpeed.SetPlayerMoveSpeed(speedDecay);
+            
             Debug.Log("Stuck in web");
         }
     }
@@ -31,5 +32,6 @@ public class SpiderWeb : MonoBehaviour
         GlobalVariables GlobalVarSpeed = FindObjectOfType<GlobalVariables>();
         GlobalVarSpeed.SetPlayerMoveSpeed(speedDecay);
         Debug.Log("Stay");
+        GameObject.Find("GameManager").GetComponent<BossScript>().bossStart = false;
     }
 }
