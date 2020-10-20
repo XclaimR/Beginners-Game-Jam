@@ -22,6 +22,9 @@ public class AudioDestroy : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "GameOver" || SceneManager.GetActiveScene().name == "Victory")
         {
+            Destroy(GameObject.Find("Planet1MainSound"));
+            Destroy(GameObject.Find("Planet2MainSound"));
+            Destroy(GameObject.Find("Planet3MainSound"));
             GameObject.Find("MainSound").GetComponent<AudioSource>().Play();
         }
     }
