@@ -24,4 +24,11 @@ public class SpiderWeb : MonoBehaviour
         GlobalVarSpeed.SetPlayerMoveSpeed(GlobalVarSpeed.GetPlayerDefaultSpeed());
         Debug.Log("Out of web");
     }
+
+    private void OnTriggerStay2D(Collider2D collider)
+    {
+        GlobalVariables GlobalVarSpeed = FindObjectOfType<GlobalVariables>();
+        GlobalVarSpeed.SetPlayerMoveSpeed(speedDecay);
+        Debug.Log("Stay");
+    }
 }
