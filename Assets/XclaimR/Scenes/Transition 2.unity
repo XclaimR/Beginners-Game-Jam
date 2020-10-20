@@ -760,7 +760,7 @@ GameObject:
   - component: {fileID: 1624170916}
   - component: {fileID: 1624170917}
   m_Layer: 5
-  m_Name: Start
+  m_Name: continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -817,7 +817,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: Continue
 --- !u!222 &1624170915
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1076,5 +1076,6 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - Orb, who was returning from a day's of hard work, got hit by an unforeseen
-      asteroid. Out of desperation, Orb was forced to crash land into a foriegn planet...
+    - "Good job! Our spaceship is almost fixed. All that is left is assembling a
+      hyper drive to go back home. \n\nFor this item, we will need to visit the planet
+      of spiders... "

@@ -194,9 +194,8 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - Our next item is a new dashboard...
-    - We need it to navigate back home...
-    - Be careful of the moles! They have very sensitive noses but bad eyesight.
+    - My research on this planet shows that the inhabitants are hostile towards intruders...
+    - Be careful!
 --- !u!58 &2784660
 CircleCollider2D:
   m_ObjectHideFlags: 0
