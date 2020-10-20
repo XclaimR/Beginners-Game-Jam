@@ -9,7 +9,8 @@ public class AudioDestroy : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Planet 1")
         {
-            GameObject.Find("MainSound").GetComponent<AudioSource>().Stop();
+            Destroy(GameObject.Find("MainSound"));
+            //GameObject.Find("MainSound").GetComponent<AudioSource>().Stop();
         }
         if (SceneManager.GetActiveScene().name == "Planet 2")
         {

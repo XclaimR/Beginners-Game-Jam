@@ -1658,7 +1658,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: aff13dbcd71e4914aa66a88b053e17ad, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 0.327
   m_Pitch: 1
   Loop: 1
@@ -5442,6 +5442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpeed: 0
   playerSpeed: 0
+  playerDefaultSpeed: 5
   lightColor: {r: 0.8584906, g: 0.40899786, b: 0.40899786, a: 0}
   chances: 2
   detectRate: 5
