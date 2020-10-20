@@ -24,13 +24,13 @@ EditorBuildSettings:
     path: Assets/XclaimR/Scenes/Planet 1.unity
     guid: 8309dcf7e5186bd489227ac45a49bbca
   - enabled: 1
-    path: Assets/XclaimR/Scenes/P1 to P2.unity
+    path: Assets/XclaimR/Scenes/transition 1.unity
     guid: 2388345bfe42a4b88bed893874ed9b08
   - enabled: 1
     path: Assets/XclaimR/Scenes/Planet 2.unity
     guid: e9a36413d42004e4b9a1b314b90dd6f7
   - enabled: 1
-    path: Assets/XclaimR/Scenes/P2 to P3.unity
+    path: Assets/XclaimR/Scenes/Transition 2.unity
     guid: aff15674d87924788ae37d9d482dce2b
   - enabled: 1
     path: Assets/XclaimR/Scenes/Planet 3.unity
