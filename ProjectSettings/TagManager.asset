@@ -14,6 +14,7 @@ TagManager:
   - Helper
   - StartPoint
   - Destroy
+  - Web
   layers:
   - Default
   - TransparentFX
