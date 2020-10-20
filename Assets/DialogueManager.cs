@@ -19,7 +19,7 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if ((Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.E)) && isTyping == false)
+        if ((Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.Space)) && isTyping == false)
         {
             
             DisplayNextSentence();

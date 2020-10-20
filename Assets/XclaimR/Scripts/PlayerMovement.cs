@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Planet 3")
         {
             //CHANGE ONCE FOOTSTEPS ARE MADE
-            playerWalk = GameObject.Find("MetalFS").GetComponent<AudioSource>();
+            playerWalk = GameObject.Find("DirtFS").GetComponent<AudioSource>();
         }
 
         playerJump = GameObject.Find("JumpSound").GetComponent<AudioSource>();

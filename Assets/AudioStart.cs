@@ -9,17 +9,17 @@ public class AudioStart : MonoBehaviour
     private static AudioStart instance = null;
     public AudioSource audio;
 
-    //private void Awake()
-    //{
-    //    if (instance == null)
-    //    {
-    //        instance = this;
-    //        //DontDestroyOnLoad(gameObject);
-    //        return;
-    //    }
-    //    if (instance == this) return;
-    //    Destroy(gameObject);
-    //}
+    void Awake()
+    {
+        DontDestroyOnLoad(this);
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else{
+            Destroy(gameObject);
+        }
+    }
 
     //void Start()
     //{
@@ -27,8 +27,6 @@ public class AudioStart : MonoBehaviour
     //    audio.Play();
     //}
 
-    void Start() {
-        DontDestroyOnLoad(gameObject);
-    }
+    
     
 }
