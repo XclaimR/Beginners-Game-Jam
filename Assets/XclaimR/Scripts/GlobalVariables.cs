@@ -7,6 +7,7 @@ public class GlobalVariables : MonoBehaviour
 {
     [SerializeField] public float enemySpeed = 0.5f;
     [SerializeField] public float playerSpeed = 5f;
+    [SerializeField] public float playerDefaultSpeed = 5f;
     [SerializeField] public Color lightColor;
     [SerializeField] public int chances = 2;
     public float detectRate = 5f;
@@ -62,6 +63,21 @@ public class GlobalVariables : MonoBehaviour
         enemySpeed = 2f;
         playerSpeed = 8f;
         lightColor = new Color(0.7924528f, 0f, 0f);
+    }
+
+    public void SetPlayerMoveSpeed(float amount)
+    {
+        playerSpeed = amount;
+    }
+
+    public float GetPlayerMoveSpeed()
+    {
+        return playerSpeed;
+    }
+
+    public float GetPlayerDefaultSpeed()
+    {
+        return playerDefaultSpeed;
     }
 
     void GameOver()
