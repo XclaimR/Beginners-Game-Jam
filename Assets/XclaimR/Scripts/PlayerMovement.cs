@@ -117,10 +117,15 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "UFO")
+        if (globalV.collected == globalV.totalCollectibles)
         {
-            if (globalV.collected == globalV.totalCollectibles)
+            if(SceneManager.GetActiveScene().name == "Planet 3")
             {
+                gameManager.GetComponent<BossScript>().bossStart = false;
+            }
+            if (collider.gameObject.tag == "UFO")
+            {
+                
                 Debug.Log("Entered");
                 //gameManager.GetComponent<SceneLoader>().LoadNextScene();
                 //gameManager.GetComponent<SceneLoader>().LoadGameOverScene();
