@@ -10,7 +10,7 @@ public class GlobalVariables : MonoBehaviour
     [SerializeField] public float playerDefaultSpeed = 5f;
     [SerializeField] public Color lightColor;
     [SerializeField] public int chances = 2;
-    public float detectRate = 5f;
+    public float detectRate = 2f;
     public float nextDetectTime = 0f;
     public float coolDownRate = 20f;
     public float nextCoolDownTime = -1f;
@@ -40,6 +40,7 @@ public class GlobalVariables : MonoBehaviour
 
     public void NormalAlert()
     {
+        GameObject.Find("DetectionSound").GetComponent<AudioSource>().Stop();
         Debug.Log("Normal");
         chances = 2;
         enemySpeed = 0.5f;
@@ -62,10 +63,12 @@ public class GlobalVariables : MonoBehaviour
 
     public void RedAlert()
     {
+        GameObject.Find("DetectionSound").GetComponent<AudioSource>().Play();
         chances--;
         if(chances == 0)
         {
             Debug.Log("Game Over");
+            GameObject.Find("DetectionSound").GetComponent<AudioSource>().Stop();
             GameOver();
         }
         enemySpeed = 2f;
