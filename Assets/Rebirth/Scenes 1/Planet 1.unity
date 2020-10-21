@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20749113, g: 0.2114747, b: 0.1457682, a: 1}
+  m_IndirectSpecularColor: {r: 0.20749141, g: 0.2114749, b: 0.14576823, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1639,7 +1639,6 @@ GameObject:
   m_Component:
   - component: {fileID: 347327822}
   - component: {fileID: 347327821}
-  - component: {fileID: 347327823}
   m_Layer: 0
   m_Name: Planet1MainSound
   m_TagString: Untagged
@@ -1658,7 +1657,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: aff13dbcd71e4914aa66a88b053e17ad, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 0.327
   m_Pitch: 1
   Loop: 1
@@ -1757,19 +1756,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &347327823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347327820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 377b8cd217e791e4cb05260076316fab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audio: {fileID: 0}
 --- !u!1 &369718385 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5693579584854294836, guid: 4390b8d511a80d149bbcb2adec838dcb,
@@ -4622,15 +4608,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: fdcb212a3fe4de744ba43abd454994f0, type: 3}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: 7f46b7f29519d9c4f893fbc5ad76328a, type: 3}
+    m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -4641,7 +4627,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: E
+  m_Text: Press E
 --- !u!222 &1083004048
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5442,6 +5428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpeed: 0
   playerSpeed: 0
+  playerDefaultSpeed: 5
   lightColor: {r: 0.8584906, g: 0.40899786, b: 0.40899786, a: 0}
   chances: 2
   detectRate: 5
@@ -6327,7 +6314,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513912428}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea4711fd03e6f9c4193d610d579e816b, type: 3}
   m_Name: 
@@ -6339,7 +6326,7 @@ PlatformEffector2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513912428}
-  m_Enabled: 1
+  m_Enabled: 0
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
@@ -6362,7 +6349,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.1178875, y: 0.04014182}
   m_SpriteTilingProperty:
@@ -7299,7 +7286,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687258581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.776013, y: 2.5978127, z: -10.50143}
+  m_LocalPosition: {x: -5.762625, y: 2.5978127, z: -10.50143}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1978013204}
@@ -8087,7 +8074,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793268319}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea4711fd03e6f9c4193d610d579e816b, type: 3}
   m_Name: 
@@ -8099,7 +8086,7 @@ PlatformEffector2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793268319}
-  m_Enabled: 1
+  m_Enabled: 0
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
@@ -8122,7 +8109,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.06340885, y: 0.04421906}
   m_SpriteTilingProperty:
@@ -8436,7 +8423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978013203}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7939873, y: -0.15781283, z: 0}
+  m_LocalPosition: {x: -0.80737495, y: -0.15781283, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1715914887}
@@ -9959,7 +9946,7 @@ PrefabInstance:
     - target: {fileID: 2593615034332763030, guid: a0b64339207210f48b4559f8f6e8ca6f,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: Our spaceship was destroyed by an asteroid while travelling back home!
+      value: Hello! I am the spaceship's AI system and here to guide you!
       objectReference: {fileID: 0}
     - target: {fileID: 2593615034332763030, guid: a0b64339207210f48b4559f8f6e8ca6f,
         type: 3}

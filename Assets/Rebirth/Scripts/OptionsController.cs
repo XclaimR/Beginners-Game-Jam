@@ -26,7 +26,7 @@ public class OptionsController : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("No music player found. Did you start from splash screen?");
+            //Debug.LogWarning("No music player found. Did you start from splash screen?");
         }
     }
 

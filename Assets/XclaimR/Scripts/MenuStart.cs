@@ -10,6 +10,7 @@ public class MenuStart : MonoBehaviour
     private int fontSize;
     private Color tempColor;
     private AudioSource audio;
+    [SerializeField] SceneLoader sceneLoader;
     //public AudioClip Mysound;
 
     void Start()
@@ -33,6 +34,7 @@ public class MenuStart : MonoBehaviour
 
     void OnMouseUp()
     {
-        SceneManager.LoadScene("Planet 1");
+        //SceneManager.LoadScene("Planet 1");
+        sceneLoader.LoadNextScene();
     }
 }
