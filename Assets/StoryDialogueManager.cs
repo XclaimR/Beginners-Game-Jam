@@ -7,10 +7,12 @@ public class StoryDialogueManager : MonoBehaviour
 {
     private Queue<string> sentences;
     public Text dialogueText;
+    private AudioSource typeSound;
 
     // Start is called before the first frame update
     void Start()
     {
+        typeSound = GameObject.Find("TypeSound").GetComponent<AudioSource>();
         sentences = new Queue<string>();
     }
 
@@ -24,7 +26,7 @@ public class StoryDialogueManager : MonoBehaviour
     {
         Debug.Log("Starting Dialogue");
         sentences.Clear();
-
+        typeSound.Play();
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
@@ -44,6 +46,7 @@ public class StoryDialogueManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+        
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -55,6 +58,7 @@ public class StoryDialogueManager : MonoBehaviour
             yield return null;
         }
         GameObject.Find("Canvas").transform.GetChild(1).gameObject.SetActive(true);
+        typeSound.Stop();
     }
 
     void EndDialogue()
