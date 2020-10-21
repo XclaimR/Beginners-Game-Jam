@@ -15,6 +15,7 @@ public class MenuStart : MonoBehaviour
 
     void Start()
     {
+        sceneLoader = GameObject.Find("SceneLoader").GetComponent<SceneLoader>();
         tempColor = start.color;
         fontSize = start.fontSize;
         audio = GameObject.Find("MenuSound").GetComponent<AudioSource>();
