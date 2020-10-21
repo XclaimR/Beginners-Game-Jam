@@ -30,6 +30,10 @@ public class GlobalVariables : MonoBehaviour
         {
             lightColor = new Color(0.6320754f, 0.6320754f, 0.6320754f);
         }
+        if (SceneManager.GetActiveScene().name == "Planet 3")
+        {
+            lightColor = new Color(0.6320754f, 0.6320754f, 0.6320754f);
+        }
 
         totalCollectibles = GameObject.FindGameObjectsWithTag("Collectible").Length;
     }
@@ -45,6 +49,10 @@ public class GlobalVariables : MonoBehaviour
             lightColor = new Color(0.7924528f, 0.2527757f, 0.1308295f);
         }
         if (SceneManager.GetActiveScene().name == "Planet 2")
+        {
+            lightColor = new Color(0.6320754f, 0.6320754f, 0.6320754f);
+        }
+        if (SceneManager.GetActiveScene().name == "Planet 3")
         {
             lightColor = new Color(0.6320754f, 0.6320754f, 0.6320754f);
         }

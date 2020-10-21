@@ -26,7 +26,7 @@ public class BossLightScript : MonoBehaviour
 
     void Update()
     {
-        //lt.color = globalV.lightColor;
+        lt.color = globalV.lightColor;
         //if (!eMove.MoveRight && isTurn)// && !eMove.isPause)
         //{
         //    //transform.Rotate(180, 0, 0);
