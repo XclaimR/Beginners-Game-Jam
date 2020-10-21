@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Lives : MonoBehaviour
 {
@@ -49,7 +50,15 @@ public class Lives : MonoBehaviour
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach(GameObject enemy in enemies)
         {
-            enemy.GetComponent<EnemyMovement>().enabled = false;
+            if(SceneManager.GetActiveScene().name != "Planet 3")
+            {
+                enemy.GetComponent<EnemyMovement>().enabled = false;
+            }
+            else
+            {
+                enemy.GetComponent<BossMovement>().enabled = false;
+            }
+                
         }
         Invoke("LoadScene", 2);
         

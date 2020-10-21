@@ -18,7 +18,7 @@ public class BossLightScript : MonoBehaviour
     void Start()
     {
         //fl_point = Enemy.transform.GetChild(4).gameObject;
-        eMove = Enemy.GetComponent<EnemyMovement>();
+        //eMove = Enemy.GetComponent<EnemyMovement>();
         lt = GetComponent<Light2D>();
         gameManager = GameObject.Find("GameManager");
         globalV = gameManager.GetComponent<GlobalVariables>();
@@ -26,17 +26,17 @@ public class BossLightScript : MonoBehaviour
 
     void Update()
     {
-        lt.color = globalV.lightColor;
-        if (!eMove.MoveRight && isTurn && !eMove.isPause)
-        {
-            transform.Rotate(180, 0, 0);
-            isTurn = false;
-        }
-        if (eMove.MoveRight && !isTurn && !eMove.isPause)
-        {
-            transform.Rotate(180, 0, 0);
-            isTurn = true;
-        }
+        //lt.color = globalV.lightColor;
+        //if (!eMove.MoveRight && isTurn)// && !eMove.isPause)
+        //{
+        //    //transform.Rotate(180, 0, 0);
+        //    isTurn = false;
+        //}
+        //if (eMove.MoveRight && !isTurn)// && !eMove.isPause)
+        //{
+        //    //transform.Rotate(180, 0, 0);
+        //    isTurn = true;
+        //}
         transform.position = fl_point.transform.position;
 
         if (Time.time > globalV.nextCoolDownTime && detected == true)
@@ -65,8 +65,8 @@ public class BossLightScript : MonoBehaviour
         if (collider.gameObject.tag == "Transform")
         {
             Debug.Log("Detected");
-            eMove.isPause = true;
-            Invoke("eMove.Resume", 1);
+            //eMove.isPause = true;
+            //Invoke("eMove.Resume", 1);
         }
     }
 

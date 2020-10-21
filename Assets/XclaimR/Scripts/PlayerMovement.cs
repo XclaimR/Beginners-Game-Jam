@@ -122,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
             if(SceneManager.GetActiveScene().name == "Planet 3")
             {
                 gameManager.GetComponent<BossScript>().bossStart = false;
+                GameObject.Find("Spider_exit").SetActive(true);
             }
             if (collider.gameObject.tag == "UFO")
             {
