@@ -11,10 +11,19 @@ public class BossScript : MonoBehaviour
     GameObject bossBlock;
     AudioSource bossGrowl;
 
+    GameObject gameManager;
+    GlobalVariables globalV;
+
+    GameObject spiderExit;
+
     void Start()
     {
+        gameManager = GameObject.Find("GameManager");
+        globalV = gameManager.GetComponent<GlobalVariables>();
         bossBlock = GameObject.Find("BossBlock");
         bossGrowl = GameObject.Find("BossGrowl").GetComponent<AudioSource>();
+        spiderExit = GameObject.Find("Spider_exit");
+        spiderExit.SetActive(false);
     }
 
     void Update()
@@ -36,6 +45,10 @@ public class BossScript : MonoBehaviour
             bossBlock.SetActive(false);
             GameObject.Find("CM vcam2").GetComponent<CinemachineVirtualCamera>().Priority = 1;
             GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>().Priority = 11;
+        }
+        if(globalV.collected == globalV.totalCollectibles)
+        {
+            spiderExit.SetActive(true);
         }
     }
 
