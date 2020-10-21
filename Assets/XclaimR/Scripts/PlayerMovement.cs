@@ -112,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
         {
             gameManager.GetComponent<Lives>().RemoveLives();
         }
-        
+
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -145,6 +145,11 @@ public class PlayerMovement : MonoBehaviour
                 }
                     
             }
+        }
+
+        if(collider.gameObject.name == "BossCollider")
+        {
+            GameObject.Find("GameManager").GetComponent<BossScript>().bossStart = true;
         }
 
         if(collider.gameObject.tag == "Enemy")

@@ -23,7 +23,7 @@ public class SpiderWeb : MonoBehaviour
     {
         GlobalVariables GlobalVarSpeed = FindObjectOfType<GlobalVariables>();
         GlobalVarSpeed.SetPlayerMoveSpeed(GlobalVarSpeed.GetPlayerDefaultSpeed());
-        GameObject.Find("GameManager").GetComponent<BossScript>().bossStart = true;
+        
         Debug.Log("Out of web");
     }
 
@@ -32,6 +32,6 @@ public class SpiderWeb : MonoBehaviour
         GlobalVariables GlobalVarSpeed = FindObjectOfType<GlobalVariables>();
         GlobalVarSpeed.SetPlayerMoveSpeed(speedDecay);
         Debug.Log("Stay");
-        GameObject.Find("GameManager").GetComponent<BossScript>().bossStart = false;
+        //GameObject.Find("GameManager").GetComponent<BossScript>().bossStart = false;
     }
 }
