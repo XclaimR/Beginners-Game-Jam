@@ -60,6 +60,7 @@ public class Lives : MonoBehaviour
         if (GetLives() <= 0)
         {
             FindObjectOfType<SceneLoader>().LoadGameOverScene();
+            PlayerPrefs.SetInt("Lives",3);
         }
         else
         {

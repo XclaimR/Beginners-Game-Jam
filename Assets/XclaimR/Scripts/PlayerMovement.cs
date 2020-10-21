@@ -135,6 +135,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 {
+                    PlayerPrefs.SetInt("Lives", 3);
                     GameObject timer = GameObject.Find("Timer");
                     float sTime = Time.time - timer.GetComponent<Timer>().startTime;
                     PlayerPrefs.SetFloat("Runtime", sTime);
