@@ -170,7 +170,7 @@ TextureImporter:
         width: 415
         height: 411
       alignment: 9
-      pivot: {x: 0.112084664, y: 0.62729883}
+      pivot: {x: 0.9203075, y: 0.61802566}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,7 +191,7 @@ TextureImporter:
         width: 404
         height: 467
       alignment: 9
-      pivot: {x: 0.9084388, y: 0.577562}
+      pivot: {x: 0.08037726, y: 0.577562}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,7 +212,7 @@ TextureImporter:
         width: 391
         height: 419
       alignment: 9
-      pivot: {x: 0.108860336, y: 0.5384213}
+      pivot: {x: 0.93714035, y: 0.5666993}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,7 +254,7 @@ TextureImporter:
         width: 403
         height: 390
       alignment: 9
-      pivot: {x: 0.9094523, y: 0.45872176}
+      pivot: {x: 0.102434255, y: 0.56358546}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,7 +275,7 @@ TextureImporter:
         width: 327
         height: 478
       alignment: 9
-      pivot: {x: 0.09384557, y: 0.34844512}
+      pivot: {x: 0.9605386, y: 0.73041284}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,7 +296,7 @@ TextureImporter:
         width: 339
         height: 522
       alignment: 9
-      pivot: {x: 0.96300876, y: 0.33808985}
+      pivot: {x: 0.07039676, y: 0.6557701}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -312,12 +312,12 @@ TextureImporter:
       name: spider_baby_export_11
       rect:
         serializedVersion: 2
-        x: 844
+        x: 846
         y: 429
         width: 284
         height: 494
       alignment: 9
-      pivot: {x: 0.11737748, y: 0.41038296}
+      pivot: {x: 0.9653316, y: 0.68362844}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -338,7 +338,7 @@ TextureImporter:
         width: 285
         height: 493
       alignment: 9
-      pivot: {x: 0.89540076, y: 0.41020107}
+      pivot: {x: 0.07271193, y: 0.6832824}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
