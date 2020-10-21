@@ -129,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("Entered");
                 //gameManager.GetComponent<SceneLoader>().LoadNextScene();
                 //gameManager.GetComponent<SceneLoader>().LoadGameOverScene();
-                if (SceneManager.GetActiveScene().buildIndex + 1 != 7)
+                if (SceneManager.GetActiveScene().buildIndex + 1 != 10)
                 {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
