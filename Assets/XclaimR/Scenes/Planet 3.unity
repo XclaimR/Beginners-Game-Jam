@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20749113, g: 0.2114747, b: 0.1457682, a: 1}
+  m_IndirectSpecularColor: {r: 0.20749141, g: 0.2114749, b: 0.14576823, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -149,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2784656}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.059999943, y: -0.66, z: 40.83634}
+  m_LocalPosition: {x: -0.059999943, y: -0.73, z: 40.83634}
   m_LocalScale: {x: 0.14320144, y: 0.14320144, z: 0.14320144}
   m_Children:
   - {fileID: 1688112528}
@@ -194,8 +194,9 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - My research on this planet shows that the inhabitants are hostile towards intruders...
-    - Be careful!
+    - My research on shows that intruders who step on this planet disappear without
+      a trace...
+    - 'Be aware above you... '
 --- !u!58 &2784660
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4934,7 +4935,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092529733}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.8, y: 4.94, z: 0}
+  m_LocalPosition: {x: -6.8, y: 4.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2784657}
@@ -8404,7 +8405,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687258581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.7725906, y: 6.339999, z: -10.50143}
+  m_LocalPosition: {x: -5.7626247, y: 6.339999, z: -10.50143}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1978013204}
@@ -9389,7 +9390,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872527753}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.9914265, y: -2.3101454, z: 0}
+  m_LocalPosition: {x: -3.0013924, y: -2.3101454, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 465803187}
@@ -9992,7 +9993,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978013203}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.147955, y: 0, z: 0}
+  m_LocalPosition: {x: -5.157921, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1715914887}
