@@ -20,6 +20,20 @@ public class MenuStory : MonoBehaviour
         audio = GameObject.Find("MenuSound").GetComponent<AudioSource>();
     }
 
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Return))
+        {
+            string username = name.text;
+            PlayerPrefs.SetString("Username", username);
+            GameObject timer = GameObject.Find("Timer");
+            timer.GetComponent<Timer>().startTime = Time.time;
+            Debug.Log("Start Time : " + timer.GetComponent<Timer>().DisplayTime(timer.GetComponent<Timer>().startTime));
+            DontDestroyOnLoad(timer);
+            SceneManager.LoadScene("Story");
+        }
+    }
+
     void OnMouseEnter()
     {
         start.fontSize = fontSize + 5;
