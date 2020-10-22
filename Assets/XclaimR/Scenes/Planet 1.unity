@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20749113, g: 0.2114747, b: 0.1457682, a: 1}
+  m_IndirectSpecularColor: {r: 0.20749141, g: 0.2114749, b: 0.14576823, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7327,7 +7327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687258581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.772591, y: 2.5978127, z: -10.50143}
+  m_LocalPosition: {x: -5.760386, y: 2.5978127, z: -10.50143}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1978013204}
@@ -8486,7 +8486,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978013203}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.79740906, y: -0.15781283, z: 0}
+  m_LocalPosition: {x: -0.8096142, y: -0.15781283, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1715914887}
@@ -10181,7 +10181,8 @@ PrefabInstance:
     - target: {fileID: 2593615034332763030, guid: a0b64339207210f48b4559f8f6e8ca6f,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: Collect the items that are glowing to assemble the component....
+      value: Collect the glowing items and come back to the space ship once you are
+        done....
       objectReference: {fileID: 0}
     - target: {fileID: 2593615034332763030, guid: a0b64339207210f48b4559f8f6e8ca6f,
         type: 3}
