@@ -9,6 +9,7 @@ public class PlayerHelper : MonoBehaviour
     GameObject player;
 
     public Dialogue dialogue;
+    private Dialogue tempDialogue;
     
     private AudioSource dialogueOpen;
     private AudioSource dialogueClose;
@@ -22,6 +23,7 @@ public class PlayerHelper : MonoBehaviour
     {
         dialogueOpen = GameObject.Find("dialogueOpen").GetComponent<AudioSource>();
         dialogueClose = GameObject.Find("dialogueClose").GetComponent<AudioSource>();
+        tempDialogue = dialogue;
         
     }
 
@@ -36,7 +38,7 @@ public class PlayerHelper : MonoBehaviour
                 collider.gameObject.GetComponent<PlayerMovement>().playerWalk.Stop();
                 gameObject.transform.GetChild(0).gameObject.SetActive(true);
                 collider.gameObject.GetComponent<PlayerMovement>().enabled = false;
-                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+                FindObjectOfType<DialogueManager>().StartDialogue(tempDialogue);
                 dialogueOpen.Play();
                 isDone = false;
                 //Invoke("Close", 2);
@@ -48,6 +50,7 @@ public class PlayerHelper : MonoBehaviour
             {
                 //Invoke("Done", 2);
                 isClose = false;
+                isDone = true;
                 dialogueClose.Play();
                 gameObject.transform.GetChild(0).gameObject.SetActive(false);
                 collider.gameObject.GetComponent<PlayerMovement>().enabled = true;
@@ -61,8 +64,8 @@ public class PlayerHelper : MonoBehaviour
         {
             Debug.Log("Exited");
             collider.gameObject.transform.Find("Canvas").gameObject.SetActive(false);
-            bool isDone = true;
-            bool isClose = false;
+            isDone = true;
+            isClose = false;
         }
 
     }
