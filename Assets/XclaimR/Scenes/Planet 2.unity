@@ -445,7 +445,7 @@ PrefabInstance:
     - target: {fileID: 5779671533448025217, guid: 81e74841a9217d242b243b011022fb40,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6729206807527343040, guid: 81e74841a9217d242b243b011022fb40,
         type: 3}
@@ -1279,7 +1279,7 @@ PrefabInstance:
     - target: {fileID: 5779671533448025217, guid: 81e74841a9217d242b243b011022fb40,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6729206807527343040, guid: 81e74841a9217d242b243b011022fb40,
         type: 3}
@@ -3775,7 +3775,7 @@ SpriteRenderer:
   m_SortingOrder: 5
   m_Sprite: {fileID: 3754939147669111677, guid: 1bd4ec5debeb2427d9e68a307f4cd94b,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3878,7 +3878,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 6
   m_Sprite: {fileID: 861258587001488530, guid: 1bd4ec5debeb2427d9e68a307f4cd94b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6154,7 +6154,7 @@ SpriteRenderer:
   m_SortingOrder: 6
   m_Sprite: {fileID: 4299585921007881230, guid: 1bd4ec5debeb2427d9e68a307f4cd94b,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7113,7 +7113,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 726833d1cdc22704bb38c847da6abf6f, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.341
+  m_Volume: 0.609
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7269,7 +7269,7 @@ SpriteRenderer:
   m_SortingOrder: 6
   m_Sprite: {fileID: 8219415528871900190, guid: 1bd4ec5debeb2427d9e68a307f4cd94b,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9869,7 +9869,7 @@ PrefabInstance:
     - target: {fileID: 5779671533448025217, guid: 81e74841a9217d242b243b011022fb40,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6729206807527343040, guid: 81e74841a9217d242b243b011022fb40,
         type: 3}
@@ -10463,7 +10463,7 @@ SpriteRenderer:
   m_SortingOrder: 6
   m_Sprite: {fileID: 8871376443747939173, guid: 1bd4ec5debeb2427d9e68a307f4cd94b,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
